@@ -58,3 +58,54 @@ switch (num) {   // Конструкция свитч всегда идёт на
 	default:
 		console.log('GGWP');
 }
+
+// Дополнительно. Логические операторы
+
+// Ситуация.. "Я голоден и хочу купить картошку фри и гамбургер. Если оба блюда есть в наличии то я выполню свою задачу, я наемся))" пример кода
+
+// const hamburger = 5; // В наличии есть гамбургер
+// const fries = 0; // Тоже самое и для картохи фри
+
+// Дальше условие
+if (hamburger && fries) {
+	console.log('Я накушался');
+}
+
+// console.log((hamburger && fries)); // Результат логических операций - это какое-то логическое булевое значение
+
+// const hamburger = 3; 
+// const fries = 1;
+// const cola = 1;
+
+// console.log(hamburger === 3 && cola && fries); // Когда операторы работают именно с данными (не true или false), они будут возвращать значения, с которыми они работают. Оператор И (&&) возвращает первое ложное значение, в противном случае, если всё истинно, то вернёт последний
+
+// Ещё несколько примеров
+
+// console.log(1 && 0);
+// console.log(1 && 5);
+// console.log(null && 5);
+// console.log(0 && 'qwerty');
+
+// if (hamburger === 3 && cola === 1 && fries) {
+// 	console.log('Все накушались');
+// } else {
+// 	console.log('Мы уходим');
+// }
+
+
+const hamburger = 3; 
+const fries = 3;
+const cola = 0;
+const nuggets = 2;
+
+if (hamburger === 3 && cola === 2 || fries === 3 && nuggets) {
+	console.log('Все довльны');
+} else {
+	console.log('Мы уходим');
+}
+
+console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets);
+
+let johnReport, alexReport, samreport, mariaReport = 'done';
+
+console.log(johnReport || alexReport || samreport || mariaReport);
