@@ -109,3 +109,37 @@ console.log(hamburger === 3 && cola === 2 || fries === 3 && nuggets);
 let johnReport, alexReport, samreport, mariaReport = 'done';
 
 console.log(johnReport || alexReport || samreport || mariaReport);
+
+for (let i = 1; i <= 3; i++) {
+	console.log(i);
+	for (let j = 1; j <= 3; j++) {
+		console.log(j);
+	}
+}
+
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+
+
+// let star = '';
+// const lenght = 7;
+
+// for (let i = 1; i < lenght; i++) {
+// 	for (let j = 0; j < i; j++) {
+// 		star += '*';
+// 	}
+// 	star += '\n';
+// }
+// console.log(star);
+
+for (let i = 1; i < 7; i++) {
+	let star = '';
+	for (let j = 1; j < i; j++) {
+		star += '*';
+	}
+	console.log(star);
+}
