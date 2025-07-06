@@ -1,28 +1,39 @@
 'use strict';
 
-const numberOfFilms = prompt('Сколько фильмов вы уже посмотрели?');
-
+const numberOfFilms = +prompt('Сколько фильмов вы уже смотрели?');
 const personalMovieDB = {
-	count: numberOfFilms,
-	movies: {},
-	actors: {},
-	genres: [],
-	privat: false
-};
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+}
+if (personalMovieDB.count < 10) {
+    alert('Просмотренно довольно мало фильмов');
+} else if (personalMovieDB.count <= 30) {
+    alert('Вы классический зритель');
+} else if (personalMovieDB.count > 30) {
+    alert('Вы киноман');
+} else {
+    alert('Произошла ошибка');
+}
 
-const a = prompt('Один из последних просмотренных фильмов?'),
-	b = prompt('На сколько оцените его?'),
-	c = prompt('Какой ещё фильм вам понравился?'),
-	d = prompt('И на сколько оцените его?');
-
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
-
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Один из последних просмотренных фильмов?'),
+        b = prompt('На сколько оцените его?');
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+            personalMovieDB.movies[a] = b;
+            console.log('done');
+        } else {
+            console.log('error');
+            i--;
+        }
+}
 console.log(personalMovieDB);
 
 
 // Условия
-if (0) {
+if (1) {
 	console.log('Ok!');
 } else {
 	console.log('error');
@@ -30,6 +41,7 @@ if (0) {
 
 // Вложенность условий
 
+const num = '50';
 
 if (num < 49) {
 	console.log('error');
@@ -43,7 +55,6 @@ if (num < 49) {
 
 // Оператор switch в JavaScript - это конструкция выбора, которая позволяет выполнить различные блоки кода в зависимости от значения выражения. Он сравнивает значение выражения с несколькими значениями (case), и если находит совпадение, выполняет соответствующий блок кода. Если ни один из case не совпадает, может быть выполнен блок default, который является необязательным. switch часто используется для упрощения кода, когда требуется проверить переменную на несколько возможных значений, заменяя собой несколько вложенных операторов if. 
 
-const num = '50';
 
 switch (num) {   // Конструкция свитч всегда идёт на строгое сравнение в отличии от обычных условий
 	case '49':
@@ -63,8 +74,8 @@ switch (num) {   // Конструкция свитч всегда идёт на
 
 // Ситуация.. "Я голоден и хочу купить картошку фри и гамбургер. Если оба блюда есть в наличии то я выполню свою задачу, я наемся))" пример кода
 
-// const hamburger = 5; // В наличии есть гамбургер
-// const fries = 0; // Тоже самое и для картохи фри
+const hamburger = 5; // В наличии есть гамбургер
+const fries = 0; // Тоже самое и для картохи фри
 
 // Дальше условие
 if (hamburger && fries) {
@@ -93,8 +104,8 @@ if (hamburger && fries) {
 // }
 
 
-const hamburger = 3; 
-const fries = 3;
+// const hamburger = 3; 
+// const fries = 3;
 const cola = 0;
 const nuggets = 2;
 
@@ -138,7 +149,7 @@ for (let i = 1; i <= 3; i++) {
 
 for (let i = 1; i < 7; i++) {
 	let star = '';
-	for (let j = 1; j < i; j++) {
+	for (let j = 0; j < i; j++) {
 		star += '*';
 	}
 	console.log(star);
