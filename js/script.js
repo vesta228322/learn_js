@@ -56,7 +56,7 @@ if (num < 49) {
 // Оператор switch в JavaScript - это конструкция выбора, которая позволяет выполнить различные блоки кода в зависимости от значения выражения. Он сравнивает значение выражения с несколькими значениями (case), и если находит совпадение, выполняет соответствующий блок кода. Если ни один из case не совпадает, может быть выполнен блок default, который является необязательным. switch часто используется для упрощения кода, когда требуется проверить переменную на несколько возможных значений, заменяя собой несколько вложенных операторов if. 
 
 
-switch (num) {   // Конструкция свитч всегда идёт на строгое сравнение в отличии от обычных условий
+switch (num) {   // Конструкция свитч всегда идёт только на строгое сравнение в отличии от обычных условий
 	case '49':
 		console.log('Неверно');
 		break;
@@ -154,3 +154,57 @@ for (let i = 1; i < 7; i++) {
 	}
 	console.log(star);
 }
+let nUM = 30; 
+
+function showFirstMessage(text) {
+	console.log(text);
+	let nUM = 20;
+	console.log(nUM);
+}
+
+showFirstMessage('Hello World!');
+console.log(nUM);
+
+function calc(a, b) {
+	return(a + b);
+}
+
+console.log(calc(4, 3));
+console.log(calc(5, 6));
+console.log(calc(10, 6));
+
+function ret() {
+	let num = 50;
+	return num;
+}
+
+const anotherNum = ret();
+console.log(anotherNum);
+
+const logger = function() {
+	console.log('Hello');
+};
+
+logger();
+
+function convert(amount) {
+	console.log(2.96 * amount);
+}
+
+convert(150);
+// Типа универсальная функция
+
+const usdCurr = 2.96;
+const eurCurr = 3.458;
+const discount = 0.9;
+
+function convert(amount, curr) {
+	return curr * amount;
+}
+
+function promotion(result) {
+	console.log(result * discount);
+}
+
+const res = convert(150, usdCurr) // Чаще всего можно видеть такое в коде.. (промежуточная переменная)
+promotion(res);
