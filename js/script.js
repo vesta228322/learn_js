@@ -208,3 +208,21 @@ function promotion(result) {
 
 const res = convert(150, usdCurr) // Чаще всего можно видеть такое в коде.. (промежуточная переменная)
 promotion(res);
+
+function test() {
+	for (i = 0; i < 5; i++) {
+		console.log(i);
+		if (i === 3) return
+	}
+	console.log('Done');
+}
+
+test();
+
+function doNothing() {};
+console.log(doNothing() === undefined);
+
+const str = 'test';
+const arr = [1, 2, 3];
+
+console.log(arr.length);
